@@ -11,11 +11,8 @@ return `This Saturday, I want to ${activity}!`;
 saturdayFun('bathe my dog')
 
 function wrapAdjective(string="*"){
-    function string(brace='special') {
-        return function(){
-            `You are ${brace}`
-        }
-        
+    return function (brace="special"){
+        return `You are ${string}${brace}${string}!`
     }
 }
-wrapAdjective("*")()
+wrapAdjective()()
